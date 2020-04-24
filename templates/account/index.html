@@ -1,0 +1,57 @@
+{% extends 'account/base.html' %}    
+{% block body_block %}
+    <div class="container-fluid">
+        <divs class="row">
+            <div style="padding-top: 400px; padding-bottom:450px; " class="bg col-3">
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <h1 style="font-size:70px; font-family: 'Pacifico', cursive;" >hobbiyer</h1>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <p>Let's Get Started...</p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:300px;" class="col-9">
+                <div class="container">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <div class="row justify-content-center">
+                                <div style="font-family: 'Pacifico', cursive;" class="col text-center">
+                                    <h1 style="color:#002651;" >Login</h1>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <input style="font-weight:bold;" type="text" name="username" id="username" class="radius form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <input style="font-weight:bold;" type="password" name="password" id="password" class="radius form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col-5">
+                                    <button style="font-weight: bold; font-size:25px;" type="submit" class="bg radius form-control" >Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row justify-content-center">
+                        <div class="col text-center">
+                            <p style="color:#002651;" >Need Account ? <a href="{% url 'account:signup' %}">Signup</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

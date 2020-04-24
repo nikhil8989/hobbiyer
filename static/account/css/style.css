@@ -1,0 +1,11 @@
+body{
+    background-color: #f6f6f6;
+}
+.bg{
+    background-color: #002651;
+    color: #ff304f;
+}
+.radius{
+    border-radius:10px;
+    height:50px;
+}
